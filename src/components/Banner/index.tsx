@@ -1,19 +1,34 @@
+import { useEffect, useState } from 'react'
 import { Image, Titulo, Precos } from './styles'
 
 import bannerImg from '../../assets/images/banner-homem-aranha.png'
 import Tag from '../Tag'
 import Button from '../Button'
+import { Game } from '../../pages/Home'
+import { formatPrice } from '../ProductsList'
 
 const Banner = () => {
+  const [game, setGame] = useState<Game>()
+
+  useEffect(() => {
+    fetch('https://fake-api-tau.vercel.app/api/eplay/destaque')
+      .then((res) => res.json())
+      .then((res) => setGame(res))
+  }, [])
+
+  if (!game) {
+    return <h3>Carregando...</h3>
+  }
+
   return (
-    <Image style={{ backgroundImage: `url(${bannerImg})` }}>
+    <Image style={{ backgroundImage: `url(${game.media.cover})` }}>
       <div className="container">
         <div>
           <Tag size="big">Destaque do dia</Tag>
-          <Titulo>Marvel&apos;s Spider-Man: Miles Morales PS4 & PS5</Titulo>
+          <Titulo>{game.name}</Titulo>
           <Precos>
-            <span>De R$ 250,00</span> <br />
-            por apenas R$ 99,90
+            <span>{formatPrice(game.prices.old)}</span> <br />
+            por apenas {formatPrice(game.prices.current)}
           </Precos>
         </div>
         <Button
