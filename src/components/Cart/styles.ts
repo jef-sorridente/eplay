@@ -21,10 +21,14 @@ export const CartContainer = styled.div`
   right: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: flex-end;
   z-index: 1;
   color: ${cores.branca};
+
+  &.is-open {
+    display: flex;
+  }
 `
 
 export const SideBar = styled.aside`
