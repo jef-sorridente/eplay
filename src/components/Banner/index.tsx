@@ -1,9 +1,7 @@
-import { useEffect, useState } from 'react'
 import { Image, Titulo, Precos } from './styles'
 
 import Tag from '../Tag'
 import Button from '../Button'
-import { Game } from '../../pages/Home'
 import { formatPrice } from '../ProductsList'
 
 import { useGetFeatureGameQuery } from '../../services/api'

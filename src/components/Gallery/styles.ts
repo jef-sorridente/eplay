@@ -4,6 +4,7 @@ import { cores } from '../../styles'
 export const Items = styled.ul`
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 `
 
 export const Action = styled.div`
