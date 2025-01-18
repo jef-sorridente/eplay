@@ -31,7 +31,7 @@ type PurchasePayload = {
       }
       code?: number
     }
-    installments: number
+    installments: boolean
   }
 }
 
