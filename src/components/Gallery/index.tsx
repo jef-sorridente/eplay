@@ -3,11 +3,11 @@ import { useState } from 'react'
 import Section from '../Section'
 import { GalleryItem } from '../../pages/Home'
 
-import { Items, Item, Action, Modal, ModalContent } from './styles'
-
 import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
 import close from '../../assets/images/close.png'
+
+import { Items, Item, Action, Modal, ModalContent } from './styles'
 
 interface ModalState extends GalleryItem {
   isVisible: boolean

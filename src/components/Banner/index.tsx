@@ -1,13 +1,13 @@
-import { Image, Titulo, Precos } from './styles'
-
 import Tag from '../Tag'
 import Button from '../Button'
-import { formatPrice } from '../ProductsList'
 
+import { formatPrice } from '../ProductsList'
 import { useGetFeatureGameQuery } from '../../services/api'
 
+import { Image, Titulo, Precos } from './styles'
+
 const Banner = () => {
-  const { data: game, isLoading } = useGetFeatureGameQuery()
+  const { data: game } = useGetFeatureGameQuery()
 
   if (!game) {
     return <h3>Carregando...</h3>
