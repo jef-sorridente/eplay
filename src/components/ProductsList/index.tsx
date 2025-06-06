@@ -1,5 +1,6 @@
 import { Game } from '../../pages/Home'
 import { parseToBrl } from '../../utils'
+import Loader from '../loader'
 import Product from '../Product'
 import * as S from './styles'
 
@@ -7,10 +8,11 @@ export type Props = {
   id?: string
   title: string
   background: 'gray' | 'black'
-  games: Game[]
+  games?: Game[]
+  isLoading: boolean
 }
 
-const ProductsList = ({ background, title, games, id }: Props) => {
+const ProductsList = ({ background, title, games, id, isLoading }: Props) => {
   const getGameTags = (game: Game) => {
     const tags = []
     if (game.release_date) {
@@ -25,6 +27,10 @@ const ProductsList = ({ background, title, games, id }: Props) => {
     }
 
     return tags
+  }
+
+  if (isLoading) {
+    ;<Loader />
   }
 
   return (
