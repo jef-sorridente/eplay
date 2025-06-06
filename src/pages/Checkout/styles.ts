@@ -2,28 +2,28 @@ import styled from 'styled-components'
 import { colors } from '../../styles'
 
 type InputGroupProps = {
-  maxWidth?: string
+  maxwidth?: string
 }
 
 type RowProps = {
-  marginTop?: string
+  margintop?: string
 }
 
 type TabButtonProps = {
-  isActive: boolean
+  isactive: boolean
 }
 
 export const Row = styled.div<RowProps>`
   display: flex;
   column-gap: 24px;
-  margin-top: ${(props) => props.marginTop || '0'};
+  margin-top: ${(props) => props.margintop || '0'};
   align-items: flex-end;
 `
 
 export const InputGroup = styled.div<InputGroupProps>`
   flex: auto;
 
-  max-width: ${(props) => props.maxWidth || 'auto'};
+  max-width: ${(props) => props.maxwidth || 'auto'};
 
   label {
     font-size: 14px;
@@ -39,6 +39,10 @@ export const InputGroup = styled.div<InputGroupProps>`
     padding: 0 8px;
     border: 1px solid ${colors.white};
     width: 100%;
+
+    &.error {
+      border: 1px solid red;
+    }
   }
 `
 export const TabButton = styled.button<TabButtonProps>`
@@ -47,7 +51,7 @@ export const TabButton = styled.button<TabButtonProps>`
   font-weight: bold;
   color: ${colors.white};
   background-color: ${(props) =>
-    props.isActive ? colors.green : colors.black};
+    props.isactive ? colors.green : colors.black};
   height: 32px;
   border: none;
   margin-right: 16px;
