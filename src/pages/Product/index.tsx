@@ -22,13 +22,13 @@ const Product = () => {
       </Section>
       <Section title="Mais detalhes" background="gray">
         <p>
-          <b>Plataforma:</b>
+          <b>Plataforma: </b>
           {game.details.system}
           <br />
-          <b> Desenvolvedor:</b>
+          <b> Desenvolvedor: </b>
           {game.details.developer}
           <br />
-          <b>Editora:</b>
+          <b>Editora: </b>
           {game.details.publisher}
           <br />
           <b> Idiomas:</b> O jogo oferece suporte a diversos idiomas, incluindo

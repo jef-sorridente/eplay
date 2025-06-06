@@ -9,19 +9,44 @@ const Footer = () => {
           <Title>Categorias</Title>
           <Links>
             <li>
-              <Link to="/categories#rpg">RPG</Link>
+              <Link
+                title="Clique aqui para acessar jogos de RPG"
+                to="/categories#rpg"
+              >
+                RPG
+              </Link>
             </li>
             <li>
-              <Link to="/categories#action">Ação</Link>
+              <Link
+                title="Clique aqui para acessar jogos de Ação"
+                to="/categories#action"
+              >
+                Ação
+              </Link>
             </li>
             <li>
-              <Link to="/categories#sports">Esportes</Link>
+              <Link
+                title="Clique aqui para acessar jogos de Esportes"
+                to="/categories#sports"
+              >
+                Esportes
+              </Link>
             </li>
             <li>
-              <Link to="/categories#simulation">Simulação</Link>
+              <Link
+                title="Clique aqui para acessar jogos de Simulação"
+                to="/categories#simulation"
+              >
+                Simulação
+              </Link>
             </li>
             <li>
-              <Link to="/categories#fight">Luta</Link>
+              <Link
+                title="Clique aqui para acessar jogos de Luta"
+                to="/categories#fight"
+              >
+                Luta
+              </Link>
             </li>
           </Links>
         </FooterSection>
@@ -29,10 +54,20 @@ const Footer = () => {
           <Title>Acesso rápido</Title>
           <Links>
             <li>
-              <Link to="/#on-sale">Promoções</Link>
+              <Link
+                title="Clique aqui para acessar a seção de promoções"
+                to="/#on-sale"
+              >
+                Promoções
+              </Link>
             </li>
             <li>
-              <Link to="/#coming-soon">Em Breve</Link>
+              <Link
+                title="Clique aqui para acessar a seção de em breve"
+                to="/#coming-soon"
+              >
+                Em Breve
+              </Link>
             </li>
           </Links>
         </FooterSection>
