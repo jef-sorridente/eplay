@@ -2,9 +2,9 @@ import { Game } from '../../pages/Home'
 import Button from '../Button'
 import Tag from '../Tag'
 
-import { formatPrice } from '../ProductsList'
+import { parseToBrl } from '../../utils'
 
-import { Banner, Infos } from './styles'
+import * as S from './styles'
 import { useDispatch } from 'react-redux'
 import { add, open } from '../../store/reducers/cart'
 
@@ -21,22 +21,22 @@ const Hero = ({ game }: Props) => {
   }
 
   return (
-    <Banner style={{ backgroundImage: `url(${game.media.cover})` }}>
+    <S.Banner style={{ backgroundImage: `url(${game.media.cover})` }}>
       <div className="container">
         <div>
           <Tag>{game.details.category}</Tag>
           <Tag>{game.details.system}</Tag>
         </div>
-        <Infos>
+        <S.Infos>
           <h2>{game.name}</h2>
           <p>
             {game.prices.discount && (
-              <span> De {formatPrice(game.prices.old)} </span>
+              <span> De {parseToBrl(game.prices.old)} </span>
             )}
             {game.prices.current && (
               <>
                 Por R$
-                {formatPrice(game.prices.current)}
+                {parseToBrl(game.prices.current)}
               </>
             )}
           </p>
@@ -52,9 +52,9 @@ const Hero = ({ game }: Props) => {
           ) : (
             <p>Em Breve</p>
           )}
-        </Infos>
+        </S.Infos>
       </div>
-    </Banner>
+    </S.Banner>
   )
 }
 

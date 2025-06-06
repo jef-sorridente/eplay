@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 import { ButtonContainer } from '../Button/styles'
 
@@ -24,7 +24,7 @@ export const CartContainer = styled.div`
   display: none;
   justify-content: flex-end;
   z-index: 1;
-  color: ${cores.branca};
+  color: ${colors.white};
 
   &.is-open {
     display: flex;
@@ -32,7 +32,7 @@ export const CartContainer = styled.div`
 `
 
 export const SideBar = styled.aside`
-  background-color: ${cores.cinza};
+  background-color: ${colors.gray};
   padding: 40px 16px 0 16px;
   z-index: 1;
   max-width: 360px;
@@ -46,13 +46,13 @@ export const SideBar = styled.aside`
 export const Prices = styled.p`
   font-weight: bold;
   font-size: 14px;
-  color: ${cores.branca};
+  color: ${colors.white};
   margin-bottom: 24px;
 
   span {
     display: block;
     font-size: 12px;
-    color: ${cores.cinzaClaro};
+    color: ${colors.lightGray};
   }
 `
 
@@ -66,7 +66,7 @@ export const Quantity = styled.p`
 export const CartItem = styled.li`
   display: flex;
   padding: 8px 0;
-  border-bottom: 1px solid ${cores.cinzaClaro};
+  border-bottom: 1px solid ${colors.lightGray};
   position: relative;
 
   img {

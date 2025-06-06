@@ -1,4 +1,4 @@
-import { Card, Titulo, Descricao, Infos } from './styles'
+import * as S from './styles'
 
 import Tag from '../Tag'
 
@@ -29,21 +29,21 @@ const Product = ({
   }
 
   return (
-    <Card
+    <S.Card
       title={`Clique aqui para ver mais detalhes do jogo: ${title} `}
       to={`/product/${id}`}
     >
       <img src={image} alt={title} />
-      <Infos>
+      <S.Infos>
         {infos.map((info) => (
           <Tag key={info}>{info}</Tag>
         ))}
-      </Infos>
-      <Titulo>{title}</Titulo>
+      </S.Infos>
+      <S.Titulo>{title}</S.Titulo>
       <Tag>{category}</Tag>
       <Tag>{system}</Tag>
-      <Descricao>{getDescription(description)}</Descricao>
-    </Card>
+      <S.Description>{getDescription(description)}</S.Description>
+    </S.Card>
   )
 }
 
