@@ -30,7 +30,7 @@ const ProductsList = ({ background, title, games, id, isLoading }: Props) => {
   }
 
   if (isLoading) {
-    ;<Loader />
+    return <Loader />
   }
 
   return (
@@ -38,19 +38,20 @@ const ProductsList = ({ background, title, games, id, isLoading }: Props) => {
       <div className="container">
         <S.Title>{title}</S.Title>
         <S.List>
-          {games.map((game) => (
-            <li key={game.id}>
-              <Product
-                id={game.id}
-                category={game.details.category}
-                description={game.description}
-                image={game.media.thumbnail}
-                infos={getGameTags(game)}
-                system={game.details.system}
-                title={game.name}
-              />
-            </li>
-          ))}
+          {games &&
+            games.map((game) => (
+              <li key={game.id}>
+                <Product
+                  id={game.id}
+                  category={game.details.category}
+                  description={game.description}
+                  image={game.media.thumbnail}
+                  infos={getGameTags(game)}
+                  system={game.details.system}
+                  title={game.name}
+                />
+              </li>
+            ))}
         </S.List>
       </div>
     </S.Container>

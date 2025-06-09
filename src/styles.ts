@@ -21,6 +21,12 @@ export const GlobalCss = createGlobalStyle`
     font-family: "Roboto", sans-serif;
     list-style: none;
     scroll-behavior: smooth;
+
+    @media (min-width:568px) {
+      .custom-badge .custom-badge-item {
+        font-size: 14px;
+      }
+    }
   }
 
   body{
