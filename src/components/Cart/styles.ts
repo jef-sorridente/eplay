@@ -42,6 +42,12 @@ export const SideBar = styled.aside`
     max-width: 100%;
     width: 100%;
   }
+  .empty-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: ${colors.white};
+    text-align: center;
+  }
 `
 export const Prices = styled.p`
   font-weight: bold;
@@ -80,6 +86,7 @@ export const CartItem = styled.li`
     font-size: 16px;
     font-weight: bold;
   }
+
   span {
     font-size: 14px;
     font-weight: bold;
@@ -89,6 +96,7 @@ export const CartItem = styled.li`
   ${TagContainer} {
     margin: 8px 8px 16px 0;
   }
+
   button {
     background-image: url(${close});
     width: 16px;
